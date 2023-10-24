@@ -1,0 +1,211 @@
+//.footer {
+//  background-color: $color-grey;
+//  padding-top: 5rem;
+//
+//  @include sm-block() {
+//    padding-bottom: 5rem;
+//  }
+//
+//  &__block {
+//    @include col();
+//    @include size(12);
+//    font-size: .9rem;
+//    line-height: 1.2rem;
+//  }
+//
+//  &__model {
+//    display: block;
+//    margin-bottom: 2rem;
+//    padding-left: 1.4rem;
+//
+//    @include sm-block() {
+//      margin-bottom: 0;
+//    }
+//  }
+//
+//  &__contacts {
+//    padding-left: 1.4rem;
+//    display: block;
+//    font-weight: $bold;
+//    margin-bottom: 3rem;
+//
+//    @include sm-block() {
+//      margin-bottom: 0;
+//      padding-left: 0;
+//      position: relative;
+//      bottom: -6.3rem;
+//    }
+//
+//    &-aura {
+//      @include sm-block() {
+//        bottom: -12.3rem;
+//      }
+//    }
+//  }
+//
+//  &__text {
+//    margin-bottom: 2.4rem;
+//    @include sm-block() {
+//      margin-bottom: 1.4rem;
+//    }
+//
+//    ul {
+//      counter-reset: section;
+//      padding-left: 1.4rem;
+//      @include sm-block() {
+//        padding-left: 1.4rem;
+//      }
+//
+//      li {
+//        position: relative;
+//        counter-increment: section;
+//        margin-bottom: 2rem;
+//
+//        &:after {
+//          content: counter(section) '.';
+//          position: absolute;
+//          left: -1.4rem;
+//          top: 0;
+//        }
+//
+//        &.no-iter {
+//          &:after {
+//            display: none;
+//          }
+//        }
+//      }
+//    }
+//  }
+//
+//  .soc {
+//    display: flex;
+//    padding-left: 1.4rem;
+//    @include sm-block() {
+//      order: 2;
+//      padding-left: 0;
+//      margin-top: 5.5rem;
+//    }
+//
+//    &__item {
+//      width: 3.2rem;
+//      height: 3.2rem;
+//      border-radius: 50%;
+//      background-color: $color-grey-dark;
+//      display: flex;
+//      align-items: center;
+//      justify-content: center;
+//      margin-right: 1.6rem;
+//      cursor: default;
+//      transition: .2s ease-in-out all;
+//
+//      > span {
+//        line-height: 0;
+//      }
+//
+//      &-yt {
+//        background-color: transparent;
+//
+//        @include any-hover() {
+//          cursor: pointer;
+//          &:hover {
+//            opacity: .9;
+//            background-color: transparent !important;
+//          }
+//        }
+//
+//      }
+//
+//      @include any-hover() {
+//        cursor: pointer;
+//        &:hover {
+//          background-color: lighten($color-grey-dark, 5%);
+//        }
+//      }
+//
+//
+//      &:last-child {
+//        margin-right: 0;
+//      }
+//
+//      .icon-vk {
+//        width: 1.7rem;
+//        height: .8rem;
+//      }
+//
+//      .icon-fb {
+//        width: .8rem;
+//        height: 1.9rem;
+//      }
+//
+//      .icon-ok {
+//        width: 1rem;
+//        height: 1.6rem;
+//      }
+//
+//      .icon-tg {
+//        width: 1.8rem;
+//        height: 1.8rem;
+//      }
+//
+//      .icon-tt {
+//        width: 1.6rem;
+//        height: 1.6rem;
+//      }
+//
+//      .icon-classmates {
+//        width: 1rem;
+//        height: 1.6rem;
+//      }
+//
+//      .icon-inst {
+//        width: 1.6rem;
+//        height: 1.6rem;
+//      }
+//    }
+//  }
+//
+//  &__cat {
+//    position: relative;
+//    bottom: 3.5rem;
+//    @include sm-block() {
+//      order: 1;
+//      bottom: -5rem;
+//      img {
+//        width: 14.9rem;
+//      }
+//    }
+//  }
+//
+//  &__bottom {
+//    @include sm-block() {
+//      text-align: center;
+//    }
+//
+//    &-row {
+//      display: flex;
+//      justify-content: space-between;
+//      @include sm-block() {
+//        flex-direction: column;
+//        align-items: center;
+//      }
+//    }
+//  }
+//
+//  &__logo {
+//    position: relative;
+//    .logo-pl {
+//      position: relative;
+//      top: -1.5rem;
+//      @include sm-block() {
+//        top: -1rem;
+//      }
+//    }
+//    .logo-aura {
+//      position: relative;
+//      top: -4.5rem;
+//      @include sm-block() {
+//        top: -1rem;
+//      }
+//    }
+//  }
+//}

@@ -1,0 +1,28 @@
+$color-white: #fff;
+$color-text: #181C24;
+$color-pink: #FD6098;
+$color-pink-dark: #8C1A6F;
+$color-grey: #F0EEF3;
+$color-grey-dark: #908A94;
+
+// Для отзывчивых размеров(adaptive-value)
+$maxWidthContainer: 1360;
+$maxWidth: 1920;
+
+// Font Family
+$baseFont: 'Montserrat', sans-serif;
+
+// Font Weight
+$normal: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$extrabold: 800;
+
+// Font Sizing
+$baseFontSize: 1.6rem;
+$baseLineHeight: 1.5;
+$headingLineHeight: 1.3;
+
+// Path
+$path-font: '../fonts';

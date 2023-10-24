@@ -1,0 +1,62 @@
+.btn {
+  position: relative;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  display: flex;
+  height: 5.4rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2.7rem;
+  font-size: 1.6rem;
+  font-weight: $bold;
+  line-height: 1;
+  transition: backgroundColor .3s ease;
+  flex-shrink: 0;
+  padding: 0 2.5rem;
+  cursor: none;
+  white-space: nowrap;
+  @include to(350px) {
+    font-size: 1.4rem;
+  }
+  .btn-icon {
+    margin-right: 1.3rem;
+    margin-left: -2rem;
+    line-height: 0;
+    flex-shrink: 0;
+    @include md-block() {
+      position: absolute;
+      left: 2.5rem;
+    }
+  }
+  &-pink {
+    color: $color-white;
+    background-color: $color-pink;
+    &:active {
+      background-color: darken($color-pink, 5%);
+    }
+    @include any-hover() {
+      cursor: pointer;
+      &:hover {
+        background-color: darken($color-pink, 5%);
+      }
+    }
+  }
+  &-white {
+    color: $color-text;
+    background-color: $color-white;
+    &:active {
+      background-color: darken($color-white, 5%);
+    }
+    @include any-hover() {
+      cursor: pointer;
+      &:hover {
+        background-color: darken($color-white, 5%);
+      }
+    }
+  }
+  &[disabled] {
+    pointer-events: none;
+  }
+}
+

@@ -1,0 +1,168 @@
+html {
+  font-size: 62.5%;
+  //@media (max-width: 1300px) {
+  //  font-size: 52.5%;
+  //}
+  @include md-block() {
+    font-size: 62.5%;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100%;
+
+  * {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  min-width: 320px;
+  position: relative;
+  color: $color-text;
+  font-size: $baseFontSize;
+  line-height: $baseLineHeight;
+  font-family: $baseFont;
+  font-weight: $normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: $headingLineHeight;
+  margin: 0;
+
+  a {
+    font-weight: inherit;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+strong {
+  font-weight: $bold;
+}
+
+em {
+  font-style: italic;
+}
+
+.hidden {
+  overflow: hidden !important;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.container {
+  @include wrapper();
+}
+
+.row {
+  @include row-flex();
+  justify-content: space-between;
+}
+
+.isDesktop {
+  @include sm-block() {
+    display: none;
+  }
+}
+.isMobile {
+  display: none;
+  @include sm-block() {
+    display: block;
+  }
+}
+
+.bl-wrap {
+  @include col();
+  @include size(12);
+}
+
+.bl-title {
+  display: block;
+  font-size: 3rem;
+  font-weight: $extrabold;
+  line-height: 1.2;
+  @include xs-block() {
+    font-size: 2.4rem;
+  }
+}
+
+sup {
+  font-size: 1.2rem;
+  font-weight: $extrabold;
+}
+
+.btn-arrow {
+  position: fixed;
+  bottom: 10rem;
+  right: -10rem;
+  width: 7rem;
+  height: 7rem;
+  background-image: url('../images/svg/arrow-main-up.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  z-index: 5;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in-out;
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    right: 10rem;
+    @include sm-block() {
+      right: 1rem;
+    }
+  }
+  @include sm-block() {
+    cursor: default;
+    width: 5rem;
+    height: 5rem;
+    bottom: 5rem;
+  }
+}
+
+.bl-index {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  a {
+    display: block;
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: $bold;
+    color: $color-pink-dark;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
