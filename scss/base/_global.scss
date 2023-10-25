@@ -61,10 +61,15 @@ em {
   display: none;
 }
 
+#__nuxt {
+  height: 100%;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  height: 100%;
 }
 
 .content {
@@ -110,6 +115,17 @@ em {
 sup {
   font-size: 1.2rem;
   font-weight: $extrabold;
+}
+
+input {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent !important;
+  width: 94%;
+  font-size: 16px;
+  transition: 0.3s;
+  font-family: $baseFont;
 }
 
 //.btn-arrow {

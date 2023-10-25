@@ -4,16 +4,16 @@ export default defineNuxtConfig({
   css: [
       '@/scss/main.scss'
   ],
-  // vite: {
-  //     css: {
-  //         preprocessorOptions: {
-  //             scss: {
-  //                 additionalData: `
-  //                   @import "@/scss/_var.scss";
-  //                   @import "@/scss/_color.scss";
-  //                 `
-  //             }
-  //         }
-  //     }
-  // }
+  vite: {
+      css: {
+          preprocessorOptions: {
+              scss: {
+                  additionalData: `
+                    @import "@/scss/abstracts/_variables.scss";
+                    @import "@/scss/base/_grid.scss";
+                  `
+              }
+          }
+      }
+  }
 })
