@@ -112,57 +112,57 @@ sup {
   font-weight: $extrabold;
 }
 
-.btn-arrow {
-  position: fixed;
-  bottom: 10rem;
-  right: -10rem;
-  width: 7rem;
-  height: 7rem;
-  background-image: url('../images/svg/arrow-main-up.svg');
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  z-index: 5;
-  opacity: 0;
-  visibility: hidden;
-  transition: all .3s ease-in-out;
-  &.show {
-    opacity: 1;
-    visibility: visible;
-    right: 10rem;
-    @include sm-block() {
-      right: 1rem;
-    }
-  }
-  @include sm-block() {
-    cursor: default;
-    width: 5rem;
-    height: 5rem;
-    bottom: 5rem;
-  }
-}
-
-.bl-index {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  a {
-    display: block;
-    text-align: center;
-    font-size: 2.4rem;
-    font-weight: $bold;
-    color: $color-pink-dark;
-    text-decoration: underline;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    &:last-child {
-      margin-bottom: 0;
-    }
-    &:hover {
-      text-decoration: none;
-    }
-  }
-}
+//.btn-arrow {
+//  position: fixed;
+//  bottom: 10rem;
+//  right: -10rem;
+//  width: 7rem;
+//  height: 7rem;
+//  background-image: url('../images/svg/arrow-main-up.svg');
+//  background-position: center;
+//  background-size: contain;
+//  background-repeat: no-repeat;
+//  cursor: pointer;
+//  z-index: 5;
+//  opacity: 0;
+//  visibility: hidden;
+//  transition: all .3s ease-in-out;
+//  &.show {
+//    opacity: 1;
+//    visibility: visible;
+//    right: 10rem;
+//    @include sm-block() {
+//      right: 1rem;
+//    }
+//  }
+//  @include sm-block() {
+//    cursor: default;
+//    width: 5rem;
+//    height: 5rem;
+//    bottom: 5rem;
+//  }
+//}
+//
+//.bl-index {
+//  height: 100%;
+//  display: flex;
+//  flex-direction: column;
+//  align-items: center;
+//  justify-content: center;
+//  a {
+//    display: block;
+//    text-align: center;
+//    font-size: 2.4rem;
+//    font-weight: $bold;
+//    color: $color-pink-dark;
+//    text-decoration: underline;
+//    text-transform: uppercase;
+//    margin-bottom: 1rem;
+//    &:last-child {
+//      margin-bottom: 0;
+//    }
+//    &:hover {
+//      text-decoration: none;
+//    }
+//  }
+//}

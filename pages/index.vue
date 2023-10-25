@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template lang="pug">
 div
   h2 Home1
