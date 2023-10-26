@@ -32,6 +32,10 @@ footer.footer
     &__block {
       padding: 5rem 0;
 
+      @include sm-block() {
+        padding: 2.5rem 0;
+      }
+
       &-wrap {
         @include col();
         @include size(12);
@@ -39,35 +43,66 @@ footer.footer
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
+
+        @include sm-block() {
+          flex-direction: column;
+          align-items: center;
+        }
       }
     }
 
     &__info {
+      @include sm-block() {
+        text-align: center;
+      }
       &-text {
         font-size: 1.4rem;
         line-height: 2rem;
         color: $color-grey;
+        @include xs-block() {
+          br {
+            display: none;
+          }
+        }
       }
     }
 
     &__logo {
       margin-bottom: 2rem;
+      @include sm-block() {
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
 
     &__contacts {
       margin-right: 7.5rem;
+      @include md-block() {
+        margin-right: 3.5rem;
+      }
+      @include sm-block() {
+        margin-right: 0;
+      }
     }
 
     &__email {
       &-title {
         font-size: 1.4rem;
         color: $color-grey;
+        @include sm-block() {
+          display: none;
+        }
       }
       &-address {
         font-size: 1.8rem;
         line-height: 2.2rem;
         font-weight: $medium;
         transition: all .2s ease-out;
+
+        @include sm-block() {
+          display: inline-block;
+          margin-top: 1.6rem;
+        }
 
         &:hover {
           color: $color-blue;
@@ -78,6 +113,10 @@ footer.footer
     &__soc {
       display: flex;
       margin-top: 2.4rem;
+      @include sm-block() {
+        margin-top: 1.8rem;
+        justify-content: center;
+      }
       &-item {
         display: flex;
         justify-content: center;

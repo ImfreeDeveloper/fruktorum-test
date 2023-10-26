@@ -1,16 +1,18 @@
 <template lang="pug">
-.field-input
+.field-input(:class="{'is-active': isFocus, 'is-filled': !!modelValue && !isFocus }")
   .field-input__wrap
     input(
       :type="props.typeField"
       autocomplete="off"
       placeholder=""
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
       :maxlength="props.maxLength"
       required
       @focus="setFocus(true)"
       @blur="setFocus(false)"
     )
-    label(v-if="isShow") Email
+    label(v-if="isShow && !modelValue") Email
 
 </template>
 
@@ -26,14 +28,23 @@
     maxLength: {
       type: Number,
       required: false,
-      default: 10
+      default: 50
+    },
+    modelValue: {
+      type: String,
+      required: true,
+      default: ''
     },
   })
 
-  const isShow = ref(true)
+  defineEmits(['update:modelValue'])
 
-  const setFocus = (isFocus) => {
-    isShow.value = !isFocus
+  const isShow = ref(true)
+  const isFocus = ref(false)
+
+  const setFocus = (show) => {
+    isFocus.value = show
+    isShow.value = !show
   }
 </script>
 
@@ -47,6 +58,12 @@
         color: $color-white;
         font-size: 1.8rem;
         padding: 0 .8rem .2rem .8rem;
+        position: relative;
+        z-index: 1;
+
+        @include sm-block() {
+          font-size: 1.6rem;
+        }
       }
       label {
         position: absolute;
@@ -54,7 +71,21 @@
         line-height: 1;
         left: .8rem;
         bottom: 0.4rem;
-        color: $color-grey
+        color: $color-grey;
+
+        @include sm-block() {
+          font-size: 1.6rem;
+        }
+      }
+    }
+    &.is-active {
+      .field-input__wrap {
+        border-bottom: .1rem solid $color-blue;
+      }
+    }
+    &.is-filled {
+      .field-input__wrap {
+        border-bottom: .1rem solid $color-white;
       }
     }
   }

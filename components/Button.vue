@@ -51,6 +51,12 @@ button(
     cursor: pointer;
     color: $color-white;
 
+    @include sm-block() {
+      font-size: 1.6rem;
+      padding: 0 4rem;
+      height: 4.3rem;
+    }
+
     &_theme {
       &_blue {
         border: .1rem solid $color-blue;
