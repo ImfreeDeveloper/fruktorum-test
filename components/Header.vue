@@ -8,5 +8,6 @@ header.header
     display: flex;
     justify-content: center;
     padding: 2.5rem 0;
+    margin-bottom: 3rem;
   }
 </style>

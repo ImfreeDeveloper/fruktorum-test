@@ -1,5 +1,5 @@
 <template lang="pug">
-section.article-intro-block
+section.sec.article-intro-block
   .container
     .row
       .article-intro-block__wrap
@@ -25,7 +25,7 @@ section.article-intro-block
 
 <style lang="scss">
   .article-intro-block {
-    padding-bottom: 5rem;
+
     &__wrap {
       @include col();
       @include size(12);
@@ -63,9 +63,6 @@ section.article-intro-block
       @include sm-block() {
         font-size: 2.4rem;
         line-height: 3rem;
-      }
-
-      @include sm-block() {
         margin-bottom: 1.5rem;
       }
     }

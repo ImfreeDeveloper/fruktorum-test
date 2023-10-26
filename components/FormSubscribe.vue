@@ -1,5 +1,5 @@
 <template lang="pug">
-section.subscribe
+section.sec.subscribe
   .container
     .row
       .subscribe__wrap

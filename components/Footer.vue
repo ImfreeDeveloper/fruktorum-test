@@ -22,7 +22,7 @@ footer.footer
                 img(src="/images/svg/icon-inst.svg").footer__soc-item_inst
               a.footer__soc-item(href="#")
                 img(src="/images/svg/icon-tg.svg").footer__soc-item_tg
-  FormSubscribe
+  FormSubscribe.footer__subscribe
 </template>
 
 <style lang="scss">
@@ -155,6 +155,10 @@ footer.footer
           right: .1rem;
         }
       }
+    }
+
+    &__subscribe {
+      margin-bottom: 0;
     }
   }
 </style>
