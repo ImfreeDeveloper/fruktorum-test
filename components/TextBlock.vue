@@ -21,6 +21,10 @@ section.sec.text-block
       p {
         display: block;
         margin-bottom: 2rem;
+
+        @include sm-block() {
+          margin-bottom: 1.5rem;
+        }
         &:last-child {
           margin-bottom: 0;
         }
@@ -30,6 +34,14 @@ section.sec.text-block
         display: block;
         margin-bottom: 2rem;
         padding-left: 11.5rem;
+
+        @include sm-block() {
+          padding-left: 5.5rem;
+        }
+
+        @include xs-block() {
+          padding-left: 2.5rem;
+        }
 
         &:last-child {
           margin-bottom: 0;
