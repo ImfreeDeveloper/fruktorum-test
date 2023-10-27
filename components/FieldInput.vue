@@ -1,5 +1,5 @@
 <template lang="pug">
-.field-input(:class="{'is-active': isFocus, 'is-filled': !!modelValue && !isFocus }")
+.field-input(:class="{'is-active': isFocus, 'is-filled': !!modelValue.trim() && !isFocus }")
   .field-input__wrap
     input(
       :type="props.typeField"
@@ -12,7 +12,7 @@
       @focus="setFocus(true)"
       @blur="setFocus(false)"
     )
-    label(v-if="isShow && !modelValue") Email
+    label(v-if="isShow && !modelValue.trim()") {{ label }}
 
 </template>
 
@@ -24,6 +24,11 @@
       type: String,
       required: false,
       default: "text"
+    },
+    label: {
+      type: String,
+      required: false,
+      default: ""
     },
     maxLength: {
       type: Number,

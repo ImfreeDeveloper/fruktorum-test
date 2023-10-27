@@ -8,9 +8,9 @@ section.sec.cta_form_block
         .cta_form_block__form
           h2.cta_form_block__title Стань участником проекта
           form
-            FieldInput.cta_form_block__input(v-model="name")
-            FieldInput.cta_form_block__input(v-model="phone")
-            FieldInput.cta_form_block__input(v-model="email")
+            FieldInput.cta_form_block__input(v-model="name" label="Имя")
+            FieldInput.cta_form_block__input(v-model="phone" label="Телефон")
+            FieldInput.cta_form_block__input(v-model="email" label="Email")
             Button.cta_form_block__button(text="Присоединиться")
 </template>
 
@@ -87,12 +87,20 @@ const email = ref('')
         text-align: center;
         margin-bottom: 3rem;
       }
+
+      @include xs-block() {
+        text-align: left;
+      }
     }
     &__input {
       margin-bottom: 2.5rem;
       max-width: 35.3rem;
       width: 100%;
       margin-right: 0;
+
+      @include xs-block() {
+        max-width: none;
+      }
     }
     &__button {
       margin-top: auto;
@@ -100,6 +108,10 @@ const email = ref('')
 
       @include sm-block() {
         margin-top: 2rem;
+      }
+
+      @include xs-block() {
+        width: 100%;
       }
     }
   }

@@ -5,7 +5,7 @@ section.sec.subscribe
       .subscribe__wrap
         p.subscribe__title Подпишись на рассылку
         .subscribe__form
-          FieldInput.subscribe__form-input(v-model="email")
+          FieldInput.subscribe__form-input(v-model="email" label="Email")
           Button(text="Подписаться")
 </template>
 
