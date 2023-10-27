@@ -66,14 +66,11 @@ section.sec.slider-block
         background-color: $color-text;
         border-radius: .2rem;
         color: $color-white-light;
+        margin: 0;
 
         @include md-block() {
           width: 4rem;
           height: 4rem;
-        }
-
-        @include sm-block() {
-          margin: 0;
         }
       }
     }
