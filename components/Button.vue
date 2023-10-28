@@ -1,7 +1,6 @@
 <template lang="pug">
 button(
   :class="classes"
-  @click="$emit('click')"
 ) {{ text }}
 </template>
 

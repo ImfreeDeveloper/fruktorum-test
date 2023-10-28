@@ -163,4 +163,5 @@ footer.footer
   }
 </style>
 <script setup lang="ts">
+import FormSubscribe from "~/components/listBlock/FormSubscribe.vue";
 </script>
