@@ -4,49 +4,25 @@ section.sec.slider-block
     .row
       .slider-block__wrap
         carousel(v-model="currentSlide")
-          slide(v-for="slide in dataSlides" :key="slide.id")
-            .slider-block__item(:style="`background-image: url(${slide.url})`")
+          slide(v-for="(slide, idx) in dataBlock" :key="idx")
+            .slider-block__item(:style="`background-image: url(${slide})`")
           template(#addons)
             Navigation
         div.slider-block__count
-          p {{ currentSlide + 1 }} / {{ dataSlides.length }}
+          p {{ currentSlide + 1 }} / {{ dataBlock.length }}
 </template>
 
 <script setup>
   import { ref } from 'vue'
 
   const currentSlide = ref(0)
-  const dataSlides = ref([
-    {
-      id: 0,
-      url: '/images/2.jpg'
-    },
-    {
-      id: 1,
-      url: '/images/1.jpg'
-    },
-    {
-      id: 2,
-      url: '/images/3.jpg'
-    },
-    {
-      id: 3,
-      url: '/images/4.jpg'
-    },
-    {
-      id: 4,
-      url: '/images/5.jpg'
-    },
-    {
-      id: 5,
-      url: '/images/6.jpg'
-    },
-    {
-      id: 6,
-      url: '/images/7.jpg'
-    }
-  ])
 
+  const props = defineProps({
+    dataBlock: {
+      type: Object,
+      required: true,
+    },
+  })
 
 </script>
 

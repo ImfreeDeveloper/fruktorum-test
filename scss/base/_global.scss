@@ -129,7 +129,6 @@ em {
 
 .row {
   @include row-flex();
-  justify-content: space-between;
 }
 
 .sec {

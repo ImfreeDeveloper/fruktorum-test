@@ -3,9 +3,19 @@ section.sec.text-block
   .container
     .row
       .text-block__wrap
-        slot
+        div(v-html="dataBlock")
 
 </template>
+
+<script setup>
+const props = defineProps({
+  dataBlock: {
+    type: String,
+    required: true,
+  },
+})
+
+</script>
 
 <style lang="scss">
   .text-block {

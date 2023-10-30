@@ -1,4 +1,10 @@
 export default defineNuxtConfig({
+    generate: {
+        routes: [
+            '/article-1/:id',
+            // add additional dynamic routes here as needed
+        ]
+    },
   devtools: { enabled: true },
   css: [
       '@/scss/main.scss'

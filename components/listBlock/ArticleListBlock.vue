@@ -13,6 +13,8 @@ section.sec.article_list_block
 </template>
 
 <script setup>
+const router = useRouter()
+const store = useBlocksStore()
 
 const props = defineProps({
   dataBlock: {
@@ -21,8 +23,10 @@ const props = defineProps({
   },
 })
 
-const goToLink = (link) => {
-  console.log(link)
+const goToLink = async (link) => {
+  await store.fetchDataPage(link)
+
+  navigateTo(link)
 }
 
 </script>
@@ -39,9 +43,11 @@ const goToLink = (link) => {
       @include size-sm(6);
       @include size-xs(12);
 
-      @include sm-block() {
-        margin-bottom: 3rem;
-      }
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      margin-bottom: 3rem;
 
       &-img {
         background-position: center;
@@ -70,6 +76,7 @@ const goToLink = (link) => {
       }
 
       &-button {
+        margin-top: auto;
         @include xs-block() {
           width: 100%;
         }

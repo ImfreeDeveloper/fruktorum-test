@@ -1,11 +1,10 @@
 export const useBlocksStore = defineStore('blocksStore', () => {
-
     const loading = ref(true)
     const dataPageType = ref('')
     const dataMeta = ref({})
     const dataBody = ref([])
 
-    const fetchDataPage = async (url = '') => {
+    const fetchDataPage = async (url = '/') => {
         const { $api } = useNuxtApp()
 
         loading.value = true
@@ -16,6 +15,13 @@ export const useBlocksStore = defineStore('blocksStore', () => {
             dataPageType.value = data.page_type
             dataMeta.value = data.meta
             dataBody.value = data.body
+
+            // const router = useRouter()
+            // router.addRoute({
+            //   name: data.page_type,
+            //   path: '/article-1',
+            //   component: Article
+            // })
 
         } catch (e) {
             console.log(e)

@@ -4,22 +4,28 @@ section.sec.article-intro-block
     .row
       .article-intro-block__wrap
         .article-intro-block__img
-          img(src="/images/img_1-r.png")
+          img(:src="dataBlock.image")
         .article-intro-block__info
-          h2.article-intro-block__title Мир динамичного 3D Цифрового Искусства
+          h2.article-intro-block__title {{ dataBlock.title }}
           .article-intro-block__review
             ul
               li
                 img(src="/images/svg/icon-time.svg")
-                | 13 мин время чтения
+                | {{ dataBlock.reading_time }} время чтения
               li
                 img(src="/images/svg/icon-eye.svg")
-                | 360 прочитали статью
+                | {{ dataBlock.views_count }} прочитали статью
           .article-intro-block__text
-            p Впечатляющий путь, где художническая креативность сливается с передовыми технологиями. Это искусство способно преобразить наше восприятие о том, что возможно в виртуальных мирах; как границы возможностей расширяются, и как велика сила человеческой фантазии, воплощенной в трехмерные шедевры
+            p {{ dataBlock.short_description }}
 </template>
 
 <script setup>
+const props = defineProps({
+  dataBlock: {
+    type: Object,
+    required: true,
+  },
+})
 
 </script>
 
@@ -32,6 +38,7 @@ section.sec.article-intro-block
 
       display: flex;
       justify-content: space-between;
+      align-items: center;
 
       @media (max-width: 1250px) {
         align-items: center;
@@ -71,6 +78,11 @@ section.sec.article-intro-block
       flex-shrink: 0;
       width: 54.1rem;
       margin-right: 3rem;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+      img {
+        border-radius: 2px 40% 2px 2px;
+      }
 
       @media (max-width: 1250px) {
         width: 50.1rem;
@@ -88,14 +100,6 @@ section.sec.article-intro-block
       @include xs-block() {
         max-width: 38rem;
         width: 100%;
-      }
-    }
-
-    &__info {
-      padding-top: 8.5rem;
-
-      @media (max-width: 1250px) {
-        padding-top: 0;
       }
     }
 
